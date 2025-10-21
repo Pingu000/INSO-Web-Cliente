@@ -1,0 +1,26 @@
+.todo-container {
+  background-color: #2a2a40;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.todo-container.completed {
+  background-color: #5a01a7;
+  text-decoration: line-through;
+}
+
+.todo-text {
+  flex-grow: 1;
+}
+
+.todo-icon {
+  color: #ff4d4d;
+  font-size: 20px;
+  cursor: pointer;
+}

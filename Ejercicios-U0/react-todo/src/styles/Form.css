@@ -1,0 +1,22 @@
+.form-todo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input-todo {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 60%;
+  margin-right: 10px;
+}
+
+.button-todo {
+  padding: 10px 15px;
+  background-color: #5a01a7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
