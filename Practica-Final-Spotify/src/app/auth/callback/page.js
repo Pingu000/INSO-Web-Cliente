@@ -1,12 +1,10 @@
 'use client';
 
-import { Suspense, useEffect, useRef, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { saveTokens } from '@/lib/auth';
 
-export const dynamic = 'force-dynamic';
-
-function CallbackContent() {
+export default function CallbackPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [error, setError] = useState(null);
@@ -98,22 +96,5 @@ function CallbackContent() {
         <p className="text-white text-xl">Autenticando...</p>
       </div>
     </div>
-  );
-}
-
-export default function CallbackPage() {
-  return (
-    <Suspense
-      fallback={(
-        <div className="flex items-center justify-center min-h-screen bg-gray-900">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-500 mx-auto mb-4"></div>
-            <p className="text-white text-xl">Preparando autenticación...</p>
-          </div>
-        </div>
-      )}
-    >
-      <CallbackContent />
-    </Suspense>
   );
 }
